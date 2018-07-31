@@ -1,0 +1,116 @@
+<!-- 
+    uzdevums: 
+    Izveidot jQuery tā, lai uzbraucot ar peli uz kāda no apļiem, 
+    tas aplis un visi pa kreisi iegūtu klasi .rating-hover;
+    
+    uzklikšķinot uz kāda no apļiem, 
+    tam aplim un visiem pa kreisi tiek piešķirta klase - .rating-chosen
+
+    p.s. - ja kursors neatrodas aplī .rating-hover klasei nav jābūt;
+    p.s.s. - pēc klikšķa uz apļa tiem ir jākļūst zaļiem arī neizejot ar kursoru no apļa
+
+
+
+-->
+
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <style>
+  body {
+   font-family: Verdana;
+  }
+  h1, h2, h3 {
+   color: darkblue;
+  }
+  .rating-circle {
+   height: 2em;
+   width: 2em;
+   border: .1em solid black;
+   border-radius: 1.1em;
+   display: inline-block;
+   margin: 0;
+   padding: .1em;
+  }
+  .rating-chosen {
+    background-color: green;
+   }
+  .rating-hover {
+   background-color: yellow;
+  }
+
+
+  
+ </style>
+</head>
+<body>
+
+ <div id="rating-container">
+  <div class="rating-circle"></div>
+  <div class="rating-circle"></div>
+  <div class="rating-circle"></div>
+  <div class="rating-circle"></div>
+  <div class="rating-circle"></div>
+ </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+ <script>
+     $(function(){
+
+             $(".rating-circle").mouseover(function(){
+                 console.log(" circle");
+                 $(this).addClass("rating-hover");
+                 //$(".rating-hover").nextAll().attr("style", "background-color:white");
+                 $(".rating-hover").prevAll().attr("style", "background-color:yellow");
+                 
+                 
+             });
+
+             $(".rating-circle").mouseleave(function(){
+                $(".rating-hover").attr("style", "background-color:white");
+             })
+
+            
+
+
+
+
+            /*$("rating-circle").mouseenter(function(){
+                $(this).prevAll().attr("style", "background-color:yellow");
+                $(this).attr("style", "background-color:yellow");
+                console.log("yellow");
+
+            });*/
+        
+
+        /* $("#rating-container").hover(function(){
+             $(this).prevAll().addClass(".rating-hover");
+             $(".rating-hover").attr("style", "color:red");
+             
+         });*/
+
+          $(".rating-circle").click(function(){
+
+              $(this).prevAll().attr("style", "background-color:green");
+              $(this).attr("style", "background-color:green");
+                console.log("green");
+               
+               
+               // $(this).prevAll().addClass(".rating-chosen");
+               // $(".rating-chosen").attr("style", "backround-color:green");
+                
+
+                /*$(".rating-circle").addClass(".rating-chosen");
+                $(".rating-chosen").prevAll().attr("style", "color:green");*/
+                //komentars
+
+                
+            });
+
+         
+     });
+
+ </script>
+</body>
+</html>

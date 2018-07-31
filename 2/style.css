@@ -1,0 +1,15 @@
+p{
+            background:red;
+            font-size:30px;
+            color:white;
+    }
+
+section{
+    background: burlywood;
+}
+.last{
+    background: aqua;
+}
+#myid{
+    color: yellow;
+}

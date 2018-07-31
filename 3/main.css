@@ -1,0 +1,27 @@
+#assignment-instructions {
+    color: blueviolet;
+    font-family: 'Coda Caption', sans-serif;
+}
+
+code {
+    font-family: 'Inconsolata', monospace;
+    color: red;
+}
+.SecondLi > code{
+    color: green;
+}
+
+/* .SecondLi {
+    background-color: black;
+    color: white;
+} */
+li + li {
+        background-color: black;
+    color: white;
+
+}
+ol + li 
+{
+   background-color: black;
+    color: white;
+}

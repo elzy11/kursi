@@ -1,0 +1,34 @@
+p{
+     background:pink;
+     font-family: 'Gaegu', cursive;
+}
+ 
+div {
+    /* Fona krāsa – blue;
+Platums - 30%;
+Padding augšā 25px;
+Padding apakšā 0px;
+Padding labajā pusē 30px;
+Padding kreisajā pusē 15px;
+Margin – 25px;
+Border krāsa – navy;
+Border izmēri – 3px;
+Augstums – 400px; */
+
+    background-color:blueviolet;
+    width: 30%;
+    padding-top: 25px;
+    padding-right: 30px;
+    padding-left: 15px;
+    margin: 25px;
+    border-color: navy;
+    border: 3px;
+    height: 400px;
+    
+    
+
+}
+li:hover {
+  background-color: #F89B4D;
+}
+

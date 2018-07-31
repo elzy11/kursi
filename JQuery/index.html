@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .red{ color:red; }
+        .bg-red{ background-color: red;}
+        .blue{
+            color:blue;
+        }
+        .bg-blue{
+            background-color:blue;
+        }
+        .yellow{
+            color:yellow;
+        }
+        .bg-yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="target" class="wrapper" style="color:black">
+        Grandparent
+        <div class="parent container" style="color:black">
+            -Parent
+            <div class="child col-md-3" style="color:black">--first child</div>
+            <div class="child col-md-6" style="color:black" id="demo">--second child
+                <div class="list first" style="color:black">1</div>
+                <div class="list second" style="color:black">2</div>
+                <div class="list second" style="color:black">2</div>
+                <div class="list second" style="color:black">2</div>
+                <div id="3rd" class="list third" style="color:black">3</div>
+                <div class="list fourth" style="color:black" custom="article">4</div>
+                <div class="list fifth" style="color:black">5</div>
+                <div class="list sixth" style="color:black">6</div>
+                <div class="list seventh last" style="color:black">7</div>
+            </div>
+            <div class="child col-md-3" style="color:black">--third child</div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            //kad div ar id "target" tiek nospiests paradas notifikacija
+           // $("#target").click(function(){
+              //  alert("TARGET CLICKET");
+           // })
+
+           // $("div .list").click(function(){
+             //   $(this).text("clicked!");
+                //console.log("this");
+                //alert("DIV clicked");
+            //});
+
+            //$('[custom="article"]').text("custom article");
+            //$('[custom^="col"]').text("i found columms"); // klase kas sakas ar "col"
+            //$('[custom*="md"]').text("i found MD"); //klase kur'a jebkur ir "MD"
+
+
+           // $(" #target").attr("style", "color:red; font-size:15px");
+            //$("#demo").attr("style", "font-size: 30px; color:green");
+
+            // $(".parent.container").children(".col-md-3").attr("style", "color:red");
+
+            //$(".parent.container").find("*").attr("style", "color:red"); // "find" obligati vajag selektoru      // * - visi
+
+            //$("#demo").parents("*").attr("style", "color:red");
+
+            //$("#3rd").prev().attr("style", "color:red");
+            //$("#3rd").prevAll().attr("style", "color:red");
+            $("#3rd").prevUntil(".first").attr("style", "color:red");
+
+            $("#3rd").next().attr("style", "color:red");
+            $("#3rd").nextAll().attr("style", "color:red");
+            $("#3rd").nextUntil(".last").attr("style", "color:blue");
+
+
+           
+           });
+    </script>
+</body>
+</html>
+
+// click, hover mouse over
